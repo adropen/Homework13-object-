@@ -10,5 +10,9 @@ void main() {
     System.out.println(product1.equals(product3));
     Order order1 = new Order("Артур", basket);
     System.out.println(order1);
-
+    Order order2 = new Order("Артур", basket);
+    Order order3 = new Order("Артур", new Product[]{product1, product2, product3});
+    Order order4 = new Order("Артур", new Product[]{product2, product1, product3});
+    System.out.println(order2.equals(order3));
+    System.out.println(order2.equals(order4));
 }
